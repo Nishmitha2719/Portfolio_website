@@ -20,7 +20,7 @@ const Projects = () => {
       description: "Full-stack e-commerce website with user authentication, product management, shopping cart, payment integration, and admin panel for managing orders and inventory.",
       image: ecommerceProject,
       tags: ["MERN Stack", "React", "Node.js", "MongoDB"],
-      liveLink: "#",
+      liveLink: "https://e-commerce-website-rjdt.vercel.app/",
       githubLink: "#",
     },
     {
