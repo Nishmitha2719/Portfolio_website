@@ -1,24 +1,325 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nishmitha Shetty - Full Stack Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Nishmitha Shetty, a Full Stack Developer specializing in MERN stack, React.js, Next.js, and AI applications. Explore my projects and skills." />
-    <meta name="author" content="Nishmitha Shetty" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nishmitha Shetty: AI &amp; Data Science, Developer, Researcher</title>
+<meta name="description" content="Nishmitha Shetty is an AI & Data Science undergraduate, researcher and developer working across deep learning, generative AI, optimization research and full-stack software.">
+<meta name="theme-color" content="#050509">
+<meta property="og:title" content="Nishmitha Shetty: Turning intelligence into impact">
+<meta property="og:description" content="AI & Data Science · Developer · Researcher. IEEE-published research, NITK research internship, and AI/ML and full-stack projects.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050509'/%3E%3Cpath d='M8 23V9l8 10V9M16 23c6 0 9-2 9-4.5S22 15 19 14.5 13 13 13 10.5 16 7 20 7' stroke='%239B7BFF' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nishmitha Shetty","jobTitle":"AI & Data Science student, developer and researcher","sameAs":["https://www.linkedin.com/in/nishmitha-shetty-13812831b/","https://github.com/Nishmitha2719"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-    <meta property="og:title" content="Nishmitha Shetty - Full Stack Developer" />
-    <meta property="og:description" content="Full Stack Developer specializing in MERN stack, React.js, Next.js, and AI applications" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<canvas id="bg-shader" aria-hidden="true"></canvas>
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+<div class="cursor" aria-hidden="true"><div class="cursor-dot"></div><div class="cursor-ring"><span class="cursor-label"></span></div></div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<header class="nav" id="nav">
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <a href="#hero" class="mark" aria-label="Nishmitha Shetty, back to top">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 23V9l8 10V9M16 23c6 0 9-2 9-4.5S22 15 19 14.5 13 13 13 10.5 16 7 20 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+  </a>
+  <nav aria-label="Primary">
+    <ul class="nav-links">
+      <li><a href="#about" data-nav="about">About</a></li>
+      <li><a href="#skills" data-nav="skills">Skills</a></li>
+      <li><a href="#projects" data-nav="projects">Work</a></li>
+      <li><a href="#research" data-nav="research">Research</a></li>
+      <li><a href="#experience" data-nav="experience">Experience</a></li>
+      <li><a href="#contact" data-nav="contact">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span class="sr">Menu</span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Work</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero" data-scene="hero" aria-labelledby="hero-name">
+  <div class="hero-inner">
+    <p class="hero-roles intro-el" style="--d:.15s">AI &amp; DATA SCIENCE <i>|</i> DEVELOPER <i>|</i> RESEARCHER</p>
+    <h1 id="hero-name" class="hero-name" aria-label="Nishmitha Shetty">NISHMITHA</h1>
+    <p class="hero-tag intro-el" style="--d:1.1s">Turning intelligence into impact.</p>
+    <div class="hero-ctas intro-el" style="--d:1.3s">
+      <a href="#projects" class="btn btn-primary magnetic" data-cursor="Explore"><span>Explore my work</span></a>
+      <a href="#contact" class="btn btn-ghost magnetic" data-cursor="Say hi"><span>Let's connect</span></a>
+    </div>
+  </div>
+  <p class="hero-foot intro-el" style="--d:1.6s">Research intern, NITK<br><span>May – July 2026 · IEEE-published research</span></p>
+  <a href="#about" class="scroll-cue intro-el" style="--d:1.8s" aria-label="Scroll to About">
+    <span class="scroll-track"><span class="scroll-dot"></span></span>
+    <span class="scroll-text">Scroll</span>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about section" id="about" data-scene="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <h2 class="h2 reveal" id="about-h"><span>Curious first.</span> <span>Then rigorous.</span></h2>
+
+    <div class="about-grid">
+      <p class="statement" id="statement">I'm Nishmitha, an AI &amp; Data Science undergraduate who likes the part of a project where nobody knows the answer yet. I've identified medicinal plants from their leaves, taught a model to listen to a veena, and pulled drones out of radio noise. Some of that became an IEEE paper. All of it became something that runs.</p>
+
+      <figure class="portrait tilt" data-tilt="6">
+        <div class="portrait-img"><img src="assets/portrait.jpg" alt="Nishmitha Shetty, smiling, seated in a café" width="560" height="700" loading="lazy" decoding="async"></div>
+        <figcaption>Nishmitha Shetty<span>AI/ML · research · software</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="interests">
+      <div class="orbit" id="orbit" aria-label="Interests">
+        <div class="orbit-core"><span>What I keep<br>coming back to</span></div>
+        <div class="orbit-ring r1"></div><div class="orbit-ring r2"></div>
+        <ul class="orbit-items" id="orbit-items"></ul>
+      </div>
+      <div class="interest-note" aria-live="polite">
+        <p class="interest-name" id="interest-name">Artificial Intelligence</p>
+        <p class="interest-text" id="interest-text">The big question underneath everything else: how to make systems that perceive, reason and act usefully.</p>
+      </div>
+    </div>
+
+    <div class="journey">
+      <h3 class="h3">How I got here</h3>
+      <ol class="chapters" id="chapters">
+        <li><span class="ch-n">1</span><h4>Foundations</h4><p>Python, C, C++ and Java. Learning how programs and machines actually work.</p></li>
+        <li><span class="ch-n">2</span><h4>Building for the web</h4><p>From HTML and JavaScript to React, Next.js and the MERN stack: a store, an events calendar, CollabHub.</p></li>
+        <li><span class="ch-n">3</span><h4>Generative AI</h4><p>An internship project in image generation showed me how creatively AI can be applied.</p></li>
+        <li><span class="ch-n">4</span><h4>Research</h4><p>Medicinal leaf identification with EfficientNet and ArcFace, published in IEEE.</p></li>
+        <li><span class="ch-n">5</span><h4>Experiments</h4><p>Optimizer switching, graph ML for supply-chain risk, geospatial forest-loss prediction, acoustic ML on hardware.</p></li>
+        <li class="ch-now"><span class="ch-n">6</span><h4>NITK, May – July 2026</h4><p>Research internship: RF-based aerial drone detection and classification with HackRF.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills section" id="skills" data-scene="skills" aria-labelledby="skills-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 reveal" id="skills-h"><span>A working</span> <span>toolkit.</span></h2>
+      <p class="lede">Four clusters, one system. Hover or tap a node to see how I use it.</p>
+    </div>
+    <div class="constellation" id="constellation">
+      <svg class="const-lines" id="const-lines" aria-hidden="true"></svg>
+      <div class="const-nodes" id="const-nodes"></div>
+      <div class="const-info" id="const-info" aria-live="polite">
+        <p class="ci-group" id="ci-group">Programming</p>
+        <p class="ci-name" id="ci-name">Python</p>
+        <p class="ci-text" id="ci-text">My default for ML experiments, data pipelines and research code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="projects section" id="projects" data-scene="projects" aria-labelledby="projects-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 reveal" id="projects-h"><span>Selected</span> <span>work.</span></h2>
+      <p class="lede">Research, machine learning, signal processing and full-stack builds. Open any project for the full story.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects by category"></div>
+    <div class="project-grid" id="project-grid"></div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section class="research section" id="research" data-scene="research" aria-labelledby="research-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 reveal" id="research-h"><span>The lab</span> <span>notebook.</span></h2>
+      <p class="lede">Three lines of research: a published classifier, an optimizer study and a signal-processing system built at NITK.</p>
+    </div>
+
+    <!-- Study 1: Publication -->
+    <article class="study" id="study-leaf" aria-labelledby="s1-title">
+      <header class="study-head">
+        <span class="study-n">Study 1</span>
+        <p class="study-pub"><span class="pub-badge">Published · IEEE</span><span id="pub-link-slot"></span></p>
+      </header>
+      <h3 class="study-title" id="s1-title">Medicinal leaf identification with EfficientNet and ArcFace</h3>
+      <div class="study-grid">
+        <div class="study-text">
+          <h4>Problem</h4>
+          <p>Many medicinal plants have leaves that look alike, and telling them apart by eye takes expertise that isn't always available. The goal: identify the species reliably from a leaf image.</p>
+          <h4>Method</h4>
+          <p>An EfficientNet backbone extracts visual features from each leaf image. Training uses ArcFace, an additive angular-margin objective, which pushes embeddings of different species further apart on the hypersphere so that similar-looking leaves stay separable.</p>
+          <h4>Data and model</h4>
+          <dl class="facts">
+            <div><dt>Input</dt><dd>Medicinal leaf images</dd></div>
+            <div><dt>Backbone</dt><dd>EfficientNet</dd></div>
+            <div><dt>Objective</dt><dd>ArcFace (angular margin)</dd></div>
+            <div><dt>Task</dt><dd>Species classification</dd></div>
+          </dl>
+        </div>
+        <div class="study-fig">
+          <figure class="fig">
+            <svg viewBox="0 0 520 300" class="pipeline" role="img" aria-label="Architecture: leaf image to EfficientNet backbone to embedding to ArcFace angular margin to predicted species">
+              <defs>
+                <linearGradient id="gp" x1="0" x2="1"><stop offset="0" stop-color="#9B7BFF"/><stop offset="1" stop-color="#7FE7FF"/></linearGradient>
+              </defs>
+              <g class="flow" fill="none" stroke="url(#gp)" stroke-width="1.6"><path d="M92 150 H130"/><path d="M250 150 H286"/><path d="M340 150 H374"/><path d="M470 150 H484"/></g>
+              <g transform="translate(18 92)"><rect width="74" height="116" rx="10" fill="rgba(155,123,255,.08)" stroke="#9B7BFF" stroke-opacity=".5"/><path d="M37 18 C 62 32 66 66 37 98 C 8 66 12 32 37 18Z" fill="rgba(155,123,255,.25)" stroke="#9B7BFF"/><line x1="37" y1="22" x2="37" y2="96" stroke="#7FE7FF" stroke-width=".8"/></g>
+              <g transform="translate(130 70)">
+                <rect x="0" y="40" width="22" height="120" rx="3" fill="rgba(127,231,255,.12)" stroke="#7FE7FF" stroke-opacity=".5"/>
+                <rect x="30" y="52" width="20" height="96" rx="3" fill="rgba(127,231,255,.16)" stroke="#7FE7FF" stroke-opacity=".5"/>
+                <rect x="58" y="62" width="18" height="76" rx="3" fill="rgba(127,231,255,.2)" stroke="#7FE7FF" stroke-opacity=".5"/>
+                <rect x="84" y="72" width="16" height="56" rx="3" fill="rgba(127,231,255,.26)" stroke="#7FE7FF" stroke-opacity=".5"/>
+                <rect x="106" y="80" width="14" height="40" rx="3" fill="rgba(127,231,255,.32)" stroke="#7FE7FF" stroke-opacity=".5"/>
+              </g>
+              <g transform="translate(286 104)"><rect width="54" height="92" rx="8" fill="none" stroke="#EEEDF7" stroke-opacity=".3"/>
+                <g fill="#9B7BFF">
+                  <rect x="12" y="10" width="30" height="5" rx="2" class="emb"/><rect x="12" y="22" width="22" height="5" rx="2" class="emb" style="animation-delay:.2s"/><rect x="12" y="34" width="28" height="5" rx="2" class="emb" style="animation-delay:.4s"/><rect x="12" y="46" width="16" height="5" rx="2" class="emb" style="animation-delay:.6s"/><rect x="12" y="58" width="26" height="5" rx="2" class="emb" style="animation-delay:.8s"/><rect x="12" y="70" width="20" height="5" rx="2" class="emb" style="animation-delay:1s"/>
+                </g></g>
+              <g transform="translate(422 150)" fill="none"><circle r="46" stroke="#EEEDF7" stroke-opacity=".25"/>
+                <g class="spin-slow"><line x1="0" y1="0" x2="40" y2="-22" stroke="#7FE7FF" stroke-width="1.6"/><circle cx="40" cy="-22" r="3.5" fill="#7FE7FF"/></g>
+                <line x1="0" y1="0" x2="46" y2="0" stroke="#9B7BFF" stroke-width="1.6"/><circle cx="46" cy="0" r="3.5" fill="#9B7BFF"/>
+                <line x1="0" y1="0" x2="-26" y2="38" stroke="#D94BC8" stroke-width="1.2"/><circle cx="-26" cy="38" r="3" fill="#D94BC8"/>
+                <path d="M26 0 A26 26 0 0 0 22.6 -12.6" stroke="#D94BC8" stroke-width="2"/></g>
+              <g font-family="var(--mono)" font-size="11" fill="#EEEDF7" fill-opacity=".72" text-anchor="middle">
+                <text x="55" y="232">leaf image</text><text x="190" y="252">EfficientNet</text><text x="313" y="222">embedding</text><text x="422" y="226">ArcFace margin</text>
+              </g>
+              <g transform="translate(486 136)"><rect width="30" height="28" rx="6" fill="rgba(127,231,255,.2)" stroke="#7FE7FF"/><path d="M8 14l5 5 9-10" stroke="#EEEDF7" stroke-width="1.8" fill="none"/></g>
+            </svg>
+            <figcaption><b>Fig. 1</b> Architecture overview. Features from EfficientNet are trained with an ArcFace angular margin so species stay separable.</figcaption>
+          </figure>
+          <div class="result">
+            <p class="result-num" data-count="96.18">96.18<small>%</small></p>
+            <p class="result-label">reported accuracy</p>
+          </div>
+        </div>
+      </div>
+      <button class="link-btn" data-open="medicinal-leaf">Open project details</button>
+    </article>
+
+    <!-- Study 2: Optimizer -->
+    <article class="study" id="study-opt" aria-labelledby="s2-title">
+      <header class="study-head"><span class="study-n">Study 2</span><p class="study-pub">Machine Learning | Optimization | Research</p></header>
+      <h3 class="study-title" id="s2-title">Fixed Switch Optimizer with Dynamic Momentum Control</h3>
+      <div class="study-grid rev">
+        <div class="study-fig">
+          <figure class="fig">
+            <div class="opt-controls" role="group" aria-label="Switching strategy">
+              <button class="seg is-on" data-mode="fixed" aria-pressed="true">Fixed switch at 80%</button>
+              <button class="seg" data-mode="dmc" aria-pressed="false">Dynamic momentum control</button>
+            </div>
+            <canvas id="opt-chart" class="opt-chart" role="img" aria-label="Schematic training-loss curve: Adam phase, then a switch to SGD either at 80% of the training budget or when the loss stabilizes."></canvas>
+            <figcaption><b>Fig. 2</b> Schematic of the two switching mechanisms. The curve shape is illustrative, drawn to explain when the Adam → SGD switch fires, not measured results.</figcaption>
+          </figure>
+        </div>
+        <div class="study-text">
+          <p>Adam converges fast; SGD often generalizes better. This study asks how to get both by switching from one to the other mid-training, and when that switch should happen.</p>
+          <h4>Two mechanisms</h4>
+          <ul class="ticks">
+            <li><b>Fixed Switch</b> moves from Adam to SGD at 80% of the training budget.</li>
+            <li><b>Dynamic Momentum Control</b> triggers the transition when the loss stabilizes, instead of at a predetermined step.</li>
+          </ul>
+          <h4>Compared against</h4>
+          <p class="chips"><span>Adam</span><span>SGD</span><span>AdamW</span><span>SWATS</span><span>AdaBound</span><span>Lookahead</span><span>and others</span></p>
+          <h4>Evaluated on</h4>
+          <p class="chips ice"><span>MNIST</span><span>CIFAR-10</span><span>M4 time series</span></p>
+          <p class="note">Analysis covered convergence behavior, training loss, validation performance and optimization stability.</p>
+        </div>
+      </div>
+      <button class="link-btn" data-open="fixed-switch-optimizer">Open project details</button>
+    </article>
+
+    <!-- Study 3: RF Drone -->
+    <article class="study" id="study-rf" aria-labelledby="s3-title">
+      <header class="study-head"><span class="study-n">Study 3</span><p class="study-pub">Research internship · NITK · May – July 2026</p></header>
+      <h3 class="study-title" id="s3-title">RF-based aerial drone detection and classification</h3>
+      <div class="study-grid">
+        <div class="study-text">
+          <p>Drones talk to their controllers over radio. Capturing that spectrum with a HackRF software-defined radio makes it possible to detect a drone, and to tell it apart from things that look similar to other sensors.</p>
+          <h4>What I built</h4>
+          <ul class="ticks">
+            <li>An RF-based aerial drone detection and classification system using HackRF.</li>
+            <li>An ML pipeline that distinguishes drones, birds and plastic-bodied drones.</li>
+            <li>An extension of that pipeline that identifies the detected drone type.</li>
+          </ul>
+        </div>
+        <div class="study-fig">
+          <figure class="fig">
+            <canvas id="rf-chart" class="rf-chart" role="img" aria-label="Animated illustration of a radio spectrum waterfall"></canvas>
+            <ol class="rf-pipe" aria-label="Classification pipeline">
+              <li>HackRF capture</li><li>RF signal processing</li><li>ML classifier</li>
+              <li class="rf-out"><span>Drone</span><span>Bird</span><span>Plastic-bodied drone</span></li>
+              <li>Drone type</li>
+            </ol>
+            <figcaption><b>Fig. 3</b> Illustrative spectrum waterfall and the classification pipeline, from signal acquisition to drone type.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <button class="link-btn" data-open="rf-drone-detection">Open project details</button>
+    </article>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="experience section" id="experience" data-scene="experience" aria-labelledby="exp-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 reveal" id="exp-h"><span>Experience &amp;</span> <span>recognition.</span></h2>
+    </div>
+    <div class="timeline" id="timeline">
+      <div class="tl-rail" aria-hidden="true"><span class="tl-fill"></span><span class="tl-head"></span></div>
+      <div id="tl-content"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact section" id="contact" data-scene="contact" aria-labelledby="contact-h">
+  <div class="wrap contact-wrap">
+    <h2 class="contact-h" id="contact-h">Have an interesting idea? <span>Let's build something.</span></h2>
+    <div class="portal">
+      <div class="portal-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+      <a class="portal-btn magnetic" id="mail-btn" href="mailto:shettynishmitha134@gmail.com" data-cursor="Write"><span>Email me</span></a>
+    </div>
+    <div class="contact-links">
+      <div class="email-row">
+        <span class="email-text" id="email-text">shettynishmitha134@gmail.com</span>
+        <button class="copy-btn" id="copy-btn" type="button">Copy address</button>
+      </div>
+      <ul class="socials">
+        <li><a href="https://www.linkedin.com/in/nishmitha-shetty-13812831b/" target="_blank" rel="noopener noreferrer" class="magnetic" data-cursor="Open">LinkedIn</a></li>
+        <li><a href="https://github.com/Nishmitha2719" target="_blank" rel="noopener noreferrer" class="magnetic" data-cursor="Open">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>© 2026 Nishmitha Shetty</p>
+    <a href="#hero">Back to top</a>
+  </footer>
+</section>
+</main>
+
+<!-- Project detail panel -->
+<div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden>
+  <div class="panel-scroll" id="panel-scroll">
+    <button class="panel-close" id="panel-close" aria-label="Close project details" data-cursor="Close"><span></span><span></span></button>
+    <div class="panel-body" id="panel-body"></div>
+  </div>
+</div>
+
+<noscript><style>.reveal span,.intro-el{opacity:1!important;transform:none!important}</style></noscript>
+<script src="js/data.js"></script>
+<script src="js/visuals.js"></script>
+<script src="js/background.js"></script>
+<script src="js/app.js"></script>
+</body>
 </html>
