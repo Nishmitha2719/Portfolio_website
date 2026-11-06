@@ -6,7 +6,7 @@
 
 AI & Data Science undergrad · researcher · developer
 
-### 🌌 [step inside →](https://portfolio-website-six-xi-70.vercel.app)
+### 🌌 [Have a look →](https://portfolio-website-six-xi-70.vercel.app)
 
 </div>
 
