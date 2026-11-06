@@ -127,10 +127,10 @@ main, .nav, .footer { position: relative; z-index: 2; }
 
 /* ---------------- Hero ---------------- */
 .hero { position: relative; min-height: 100svh; display: grid; place-items: center; text-align: center; padding: 6rem 1rem 7rem; }
-.hero-inner { display: flex; flex-direction: column; align-items: center; }
+.hero-inner { display: flex; flex-direction: column; align-items: center; max-width: 100%; }
 .hero-roles { font: 500 clamp(.72rem, .6rem + .45vw, .95rem)/1 var(--sans); letter-spacing: .32em; color: var(--muted); margin-bottom: clamp(1.2rem, 3vh, 2rem); }
 .hero-roles i { font-style: normal; color: var(--violet-2); margin: 0 .55em; }
-.hero-name { font: 800 clamp(3.2rem, 15.5vw, 15rem)/.86 var(--display); letter-spacing: -.045em; margin: 0;
+.hero-name { font: 800 clamp(2.6rem, 11vw, 13rem)/.86 var(--display); letter-spacing: -.045em; margin: 0;
   background: linear-gradient(180deg, #fff 30%, #b8b0ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
   transition: opacity 1.2s ease .4s; white-space: nowrap; padding: 0 .02em .06em; }
 .name-particles .hero-name { opacity: 0; }

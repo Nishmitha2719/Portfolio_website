@@ -195,9 +195,24 @@ void main(){
   }
 
   // Sample the hero name from an offscreen canvas aligned with the real <h1>.
+  // Shrink the name until it fits the viewport, whatever font actually loaded.
+  function fitName() {
+    const h1 = document.getElementById("hero-name");
+    if (!h1) return;
+    h1.style.fontSize = "";
+    const avail = document.documentElement.clientWidth * (small() ? 0.9 : 0.86);
+    for (let i = 0; i < 4; i++) {
+      const w = h1.getBoundingClientRect().width;
+      if (w <= avail) break;
+      h1.style.fontSize = (parseFloat(getComputedStyle(h1).fontSize) * avail / w).toFixed(2) + "px";
+    }
+  }
+  window.addEventListener("resize", fitName);
+
   function sampleName() {
     const h1 = document.getElementById("hero-name");
     if (!h1) return;
+    fitName();
     const rect = h1.getBoundingClientRect();
     if (rect.width < 10) return;
     const cs = getComputedStyle(h1);
